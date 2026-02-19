@@ -1,0 +1,11 @@
+# IDE
+.vscode
+
+# Environment
+node_modules
+pnpm-lock.yaml
+src-tauri/Cargo.lock
+
+# Build
+dist
+src-tauri/target
