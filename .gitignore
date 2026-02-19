@@ -8,4 +8,5 @@ src-tauri/Cargo.lock
 
 # Build
 dist
-src-tauri/target
+src-tauri/target/**
+src-tauri/gen/schemas
