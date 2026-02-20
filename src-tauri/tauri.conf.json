@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "silentwrite",
+  "productName": "SilentWrite",
   "version": "0.1.0",
   "identifier": "SilentWrite",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "silentwrite",
+        "title": "SilentWrite",
         "width": 800,
         "height": 600,
         "transparent": true,
