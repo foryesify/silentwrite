@@ -10,13 +10,15 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "codemirror": "^6.0.2",
     "@codemirror/lang-markdown": "^6.5.0",
     "@codemirror/lang-yaml": "^6.1.2",
     "@lezer/highlight": "^1.2.3",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
-    "codemirror": "^6.0.2",
-    "preact": "^10.25.1"
+    "preact": "^10.25.1",
+    "wouter": "^3.9.0",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.9.3",
