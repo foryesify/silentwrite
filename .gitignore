@@ -3,7 +3,7 @@
 
 # Environment
 node_modules
-pnpm-lock.yaml
+package-lock.json
 src-tauri/Cargo.lock
 
 # Build
