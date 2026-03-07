@@ -1,9 +1,10 @@
 import "../assets/style.css";
+import {MarkdownEditor} from "./Editor";
 
 function App() {
   return (
     <main class="container">
-      <h1>Welcome to Tauri + Preact</h1>
+      <MarkdownEditor />
     </main>
   );
 }
