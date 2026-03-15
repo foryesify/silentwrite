@@ -1,0 +1,34 @@
+.titlebar {
+    display: flex;
+    background: var(--fg);
+    width: 100%;
+    height: 34px;
+}
+
+.left {
+    flex: 0;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 0;
+    display: flex;
+}
+
+.window-buttons {
+    display: flex;
+}
+
+.window-buttons > div {
+    width: 54px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -6,12 +6,16 @@
 
 :root {
   --bg: #eee;
+  --fg: #fff;
+  --hover-fade: #e7e7e7;
+  --danger: #e33;
   --txt: #333;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #333;
+    --fg: #222;
     --txt: #eee;
   }
 }

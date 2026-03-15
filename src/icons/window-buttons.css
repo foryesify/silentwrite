@@ -1,0 +1,20 @@
+.minimize-icon:hover,
+.maximize-icon:hover,
+.restore-icon:hover {
+    background: var(--hover-fade);
+}
+
+.close-icon:hover {
+    background: var(--danger);
+    color: #fff;
+}
+
+div {
+    transition: background 0.2s ease-in;
+}
+
+svg {
+    transition: color 0.2s ease-in;
+    display: inline-block;
+    vertical-align: middle;
+}
