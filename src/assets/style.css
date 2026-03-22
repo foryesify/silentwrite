@@ -7,7 +7,7 @@
 :root {
   --bg: #eee;
   --fg: #fff;
-  --hover-fade: #e7e7e7;
+  --hover-fade: #ddd;
   --danger: #e33;
   --txt: #333;
 }
@@ -16,6 +16,7 @@
   :root {
     --bg: #333;
     --fg: #222;
+    --hover-fade: #555;
     --txt: #eee;
   }
 }

@@ -1,4 +1,4 @@
-import * as icons from "../icons/window-buttons"
+import * as icons from "./WindowButtons"
 import { useState } from "preact/hooks"
 import "./Titlebar.css"
 
