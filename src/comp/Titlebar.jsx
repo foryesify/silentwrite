@@ -1,9 +1,7 @@
-import * as icons from "./WindowButtons"
-import { useState } from "preact/hooks"
 import "./Titlebar.css"
+import WindowButtons from "./WindowButtons"
 
 function Titlebar() {
-    const windowMaximized = useState(true);
     return (
         <div className="titlebar">
             <div className="left">
@@ -16,9 +14,7 @@ function Titlebar() {
             <div className="right">
                 <div className="settings"></div>
                 <div className="window-buttons">
-                    <icons.MinimizeIcon />
-                    <icons.MaximizeRestoreIcon />
-                    <icons.CloseIcon />
+                    <WindowButtons/>
                 </div>
             </div>
         </div>
