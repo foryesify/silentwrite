@@ -1,20 +1,24 @@
-import "./Titlebar.css"
+import "../assets/Titlebar.css"
 import WindowButtons from "./WindowButtons"
+import { gAppName, gTitle } from "./Global"
 
 function Titlebar() {
     return (
         <div className="titlebar">
             <div className="left">
-                <div className="app-title" data-tauri-drag-region></div>
+                <div className="app-title">{gAppName}</div>
                 <div className="menubar"></div>
             </div>
+            <div className="placeholder" data-tauri-drag-region></div>
             <div className="center" data-tauri-drag-region>
-                <div className="page-title"></div>
+                <div className="page-title" data-tauri-drag-region>
+                    {gTitle}
+                </div>
             </div>
+            <div className="placeholder" data-tauri-drag-region></div>
             <div className="right">
-                <div className="settings"></div>
                 <div className="window-buttons">
-                    <WindowButtons/>
+                    <WindowButtons />
                 </div>
             </div>
         </div>

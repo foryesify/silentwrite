@@ -4,6 +4,10 @@
     background: var(--hover-fade);
 }
 
+.settings-icon:hover {background: var(--hover-fade);
+    color: var(--primary);
+}
+
 .close-icon:hover {
     background: var(--danger);
     color: #fff;

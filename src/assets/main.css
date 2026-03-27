@@ -5,6 +5,7 @@
 }
 
 :root {
+  --primary: #4b8;
   --bg: #eee;
   --fg: #fff;
   --hover-fade: #ddd;

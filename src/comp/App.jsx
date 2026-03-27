@@ -1,4 +1,4 @@
-import "../assets/style.css";
+import "../assets/App.css";
 import Titlebar from "./Titlebar";
 
 function App() {
