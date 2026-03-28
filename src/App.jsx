@@ -1,5 +1,5 @@
-import "../assets/App.css";
-import Titlebar from "./Titlebar";
+import "@/assets/App.css";
+import Titlebar from "./comp/Titlebar";
 
 function App() {
     return (

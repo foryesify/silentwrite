@@ -1,6 +1,6 @@
-import "../assets/Titlebar.css"
-import WindowButtons from "./WindowButtons"
-import { gAppName, gTitle } from "./Global"
+import "@/assets/Titlebar.css"
+import WindowButtons from "./Titlebar/WindowButtons"
+import { gAppName, gTitle } from "@/global/public"
 
 function Titlebar() {
     return (

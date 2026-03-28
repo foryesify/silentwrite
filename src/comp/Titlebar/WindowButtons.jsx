@@ -1,7 +1,7 @@
-import "../assets/WindowButtons.css"
 import { useState } from "preact/hooks"
-import { tauriWindowToggleMinMax, isTauri, tauriAppWindow } from "./Tauri"
-import { tauriWindowMinimize, tauriWindowClose } from "./Tauri"
+import "@/assets/WindowButtons.css"
+import { tauriWindowToggleMinMax, isTauri, tauriAppWindow } from "@/global/env"
+import { tauriWindowMinimize, tauriWindowClose } from "@/global/env"
 
 export default function WindowButtons() {
     const [maximized, setMaximized] = useState(false)
