@@ -1,0 +1,11 @@
+.homeview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+
+.main-card {
+    padding: 2rem;
+    padding-bottom: 4rem;
+}

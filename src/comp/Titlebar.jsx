@@ -2,7 +2,7 @@ import "@/assets/Titlebar.css"
 import WindowButtons from "./Titlebar/WindowButtons"
 import { gAppName, gTitle } from "@/global/public"
 
-function Titlebar() {
+export default function Titlebar() {
     return (
         <div className="titlebar">
             <div className="left">
@@ -24,5 +24,3 @@ function Titlebar() {
         </div>
     )
 }
-
-export default Titlebar

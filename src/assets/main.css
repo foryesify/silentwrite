@@ -6,6 +6,7 @@
 
 :root {
   --primary: #4b8;
+  --primary-dim: #3a7;
   --bg: #eee;
   --fg: #fff;
   --hover-fade: #ddd;
@@ -36,4 +37,12 @@ body {
     opacity: 1;
     background: var(--bg);
   }
+}
+
+.button {
+  background: var(--primary-dim);
+  border-radius: 8px;
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
 }
