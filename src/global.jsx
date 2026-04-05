@@ -1,5 +1,5 @@
 import { signal } from "@preact/signals";
 
-export const G = {
+export default {
     lang: signal("zh-cn"),
 }

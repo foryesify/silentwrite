@@ -1,9 +1,9 @@
 import Titlebar from "@/Titlebar"
 import View from "@/View"
-import RightClickMenu from "./RightClickMenu";
-import GlobalMaskPanel from "./GlobalMaskPanel";
+import RightClickMenu from "@/RightClickMenu"
+import GlobalMaskPanel from "@/GlobalMaskPanel"
 
-function App() {
+export default function App() {
     return (
         <>
             <Titlebar />
@@ -13,5 +13,3 @@ function App() {
         </>
     )
 }
-
-export default App;
