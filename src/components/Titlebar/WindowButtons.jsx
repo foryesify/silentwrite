@@ -1,13 +1,39 @@
-import { useState } from "preact/hooks"
-import "@/assets/WindowButtons.css"
-import { tauriWindowToggleMinMax, isTauri, tauriAppWindow } from "@/global/env"
-import { tauriWindowMinimize, tauriWindowClose } from "@/global/env"
+import { signal } from "@preact/signals"
+import { getCurrentWindow } from "@tauri-apps/api/window";
+
+// tauri environment
+
+function isTauri() {
+    return !!(window?.__TAURI_INTERNALS__)
+}
+
+const tauriAppWindow = isTauri() ? getCurrentWindow() : {}
+
+function tauriWindowClose() {
+    if (isTauri()) {
+        tauriAppWindow.close()
+    }
+}
+
+function tauriWindowToggleMinMax() {
+    if (isTauri()) {
+        tauriAppWindow.toggleMaximize()
+    }
+}
+
+function tauriWindowMinimize() {
+    if (isTauri()) {
+        tauriAppWindow.minimize()
+    }
+}
+
+// components
 
 export default function WindowButtons() {
-    const [maximized, setMaximized] = useState(false)
+    const maximized = signal(false);
     if (isTauri()) {
         tauriAppWindow.onResized(async () => {
-            setMaximized(await tauriAppWindow.isMaximized())
+            maximized.value = await tauriAppWindow.isMaximized()
         });
     }
     return (

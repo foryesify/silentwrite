@@ -1,6 +1,3 @@
-import "@/assets/HomeView.css"
-import { gText } from "@/global/public"
-
 export default function HomeView() {
     return (
         <div className="homeview">
@@ -8,7 +5,7 @@ export default function HomeView() {
                 <div className="title">{gText.value.homeTitle}</div>
                 <div className="function-area">
                     <div className="button new-essay">
-                        {gText.value.homeNewEssay}
+                        {}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
-import "@/assets/App.css"
-import Titlebar from "./comp/Titlebar"
-import View from "./comp/View"
+import Titlebar from "@/Titlebar"
+import View from "@/View"
 
 function App() {
     return (

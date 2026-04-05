@@ -1,5 +1,3 @@
-import "@/assets/EditorView.css"
-
 export default function EditorView() {
     return (
         <div className="editorview">
