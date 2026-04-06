@@ -1,9 +1,9 @@
 [package]
 name = "silentwrite"
 version = "0.1.0"
-description = "A tool for markdown writing."
-authors = ["ForYes"]
-edition = "2024"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -22,3 +22,4 @@ tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+

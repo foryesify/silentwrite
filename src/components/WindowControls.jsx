@@ -1,44 +1,16 @@
 import { signal } from "@preact/signals"
 import { getCurrentWindow } from "@tauri-apps/api/window";
 
-// tauri environment
-
-function isTauri() {
-    return !!(window?.__TAURI_INTERNALS__)
-}
-
-const tauriAppWindow = isTauri() ? getCurrentWindow() : {}
-
-function tauriWindowClose() {
-    if (isTauri()) {
-        tauriAppWindow.close()
-    }
-}
-
-function tauriWindowToggleMinMax() {
-    if (isTauri()) {
-        tauriAppWindow.toggleMaximize()
-    }
-}
-
-function tauriWindowMinimize() {
-    if (isTauri()) {
-        tauriAppWindow.minimize()
-    }
-}
-
-// components
-
 export default function WindowButtons() {
     const maximized = signal(false);
-    if (isTauri()) {
-        tauriAppWindow.onResized(async () => {
-            maximized.value = await tauriAppWindow.isMaximized()
+    if (window?.__TAURI_INTERNALS__()) {
+        w.onResized(async () => {
+            maximized.value = await w.isMaximized()
         });
     }
     return (
         <>
-            <SettingsIcon />
+            <MoreIcon />
             <MinimizeIcon />
             {maximized ? <MaximizeIcon /> : <RestoreIcon />}
             <CloseIcon />
@@ -47,6 +19,10 @@ export default function WindowButtons() {
 }
 
 function MinimizeIcon() {
+    const tauriWindowMinimize = () => {
+        const w = window?.__TAURI_INTERNALS__ ? getCurrentWindow() : null
+        w?.minimize()
+    }
     return (
         <div className="minimize-icon" onClick={tauriWindowMinimize}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -58,6 +34,10 @@ function MinimizeIcon() {
 }
 
 function RestoreIcon() {
+    const tauriWindowToggleMinMax = () => {
+        const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
+        w?.toggleMaximize()
+    }
     return (
         <div className="restore-icon" onClick={tauriWindowToggleMinMax}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -71,6 +51,10 @@ function RestoreIcon() {
 }
 
 function MaximizeIcon() {
+    const tauriWindowToggleMinMax = () => {
+        const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
+        w?.toggleMaximize()
+    }
     return (
         <div className="maximize-icon" onClick={tauriWindowToggleMinMax}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -83,6 +67,10 @@ function MaximizeIcon() {
 }
 
 function CloseIcon() {
+    const tauriWindowClose = () => {
+        const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
+        w?.close()
+    }
     return (
         <div className="close-icon" onClick={tauriWindowClose}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -95,32 +83,15 @@ function CloseIcon() {
     )
 }
 
-function SettingsIcon() {
+function MoreIcon() {
     return (
-        <div className="settings-icon">
+        <div className="more-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3" />
-                <g transform="translate(12,12)">
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(0)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(45)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(90)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(135)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(180)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(225)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(270)" />
-                    <rect x="-1" y="-10" width="2" height="3"
-                        rx="1" transform="rotate(315)" />
-                </g>
-                <circle cx="12" cy="12" r="7" />
+                <rect x="3" y="6" width="18" height="2" rx="1" />
+                <rect x="3" y="11" width="18" height="2" rx="1" />
+                <rect x="3" y="16" width="18" height="2" rx="1" />
             </svg>
         </div>
     )
