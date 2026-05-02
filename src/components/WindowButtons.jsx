@@ -9,22 +9,22 @@ export default function WindowButtons() {
         });
     }
     return (
-        <>
+        <div className="window-controls">
             <MoreIcon />
             <MinimizeIcon />
             {maximized ? <MaximizeIcon /> : <RestoreIcon />}
             <CloseIcon />
-        </>
+        </div>
     )
 }
 
 function MinimizeIcon() {
-    const tauriWindowMinimize = () => {
+    const minimize = () => {
         const w = window?.__TAURI_INTERNALS__ ? getCurrentWindow() : null
         w?.minimize()
     }
     return (
-        <div className="minimize-icon" onClick={tauriWindowMinimize}>
+        <div className="minimize-icon" onClick={minimize}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -34,12 +34,12 @@ function MinimizeIcon() {
 }
 
 function RestoreIcon() {
-    const tauriWindowToggleMinMax = () => {
+    const toggleMaximize = () => {
         const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
         w?.toggleMaximize()
     }
     return (
-        <div className="restore-icon" onClick={tauriWindowToggleMinMax}>
+        <div className="restore-icon" onClick={toggleMaximize}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2"
                 strokeLinecap="round" strokeLinejoin="round">
@@ -51,12 +51,12 @@ function RestoreIcon() {
 }
 
 function MaximizeIcon() {
-    const tauriWindowToggleMinMax = () => {
+    const toggleMaximize = () => {
         const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
         w?.toggleMaximize()
     }
     return (
-        <div className="maximize-icon" onClick={tauriWindowToggleMinMax}>
+        <div className="maximize-icon" onClick={toggleMaximize}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2"
                 strokeLinecap="round" strokeLinejoin="round">
@@ -67,12 +67,12 @@ function MaximizeIcon() {
 }
 
 function CloseIcon() {
-    const tauriWindowClose = () => {
+    const close = () => {
         const w = window?.__TAURI_INTERNALS__() ? getCurrentWindow() : null
         w?.close()
     }
     return (
-        <div className="close-icon" onClick={tauriWindowClose}>
+        <div className="close-icon" onClick={close}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
