@@ -2,12 +2,10 @@ import { signal } from "@preact/signals"
 import { getCurrentWindow as getWindow } from "@tauri-apps/api/window";
 
 export default function WindowButtons() {
-    const maximized = signal(false);
-    w.onResized(async () => maximized.value = await w.isMaximized());
     return (
-        <div className="window-controls">
+        <div className="window-buttons">
             <MinimizeIcon />
-            {maximized ? <MaximizeIcon /> : <RestoreIcon />}
+            <MaximizeIcon />
             <CloseIcon />
         </div>
     )
@@ -15,7 +13,8 @@ export default function WindowButtons() {
 
 function MinimizeIcon() {
     return (
-        <div className="minimize-icon" onClick={getWindow().minimize}>
+        <div className="minimize-icon"
+            onClick={async () => (await getWindow()).minimize()}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -24,22 +23,10 @@ function MinimizeIcon() {
     )
 }
 
-function RestoreIcon() {
-    return (
-        <div className="restore-icon" onClick={getWindow().toggleMaximize}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2"
-                strokeLinecap="round" strokeLinejoin="round">
-                <path d="M8 8H4v12h12v-4" />
-                <path d="M12 4h8v8h-8z" />
-            </svg>
-        </div>
-    )
-}
-
 function MaximizeIcon() {
     return (
-        <div className="maximize-icon" onClick={getWindow().toggleMaximize}>
+        <div className="maximize-icon"
+            onClick={async () => await getWindow().toggleMaximize()}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2"
                 strokeLinecap="round" strokeLinejoin="round">
@@ -51,7 +38,8 @@ function MaximizeIcon() {
 
 function CloseIcon() {
     return (
-        <div className="close-icon" onClick={getWindow().close}>
+        <div className="close-icon"
+            onClick={async () => await getWindow().close()}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">

@@ -22,3 +22,28 @@ body {
   font-size: 16px;
   line-height: 1.2;
 }
+
+.window-buttons {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.window-buttons > div {
+  width: 46px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.window-buttons > div:hover {
+  background-color: #777;
+}
+
+.window-buttons > .close-icon:hover {
+  background-color: #e81123;
+}
