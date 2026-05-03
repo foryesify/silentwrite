@@ -15,9 +15,7 @@
         "title": "silentwrite",
         "width": 800,
         "height": 600,
-        "decorations": false,
-        "focus": true,
-        "backgroundColor": "#111"
+        "decorations": false
       }
     ],
     "security": {
