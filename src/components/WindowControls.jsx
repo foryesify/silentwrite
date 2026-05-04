@@ -1,14 +1,18 @@
 import { signal } from "@preact/signals"
 import { getCurrentWindow as getWindow } from "@tauri-apps/api/window";
 
-export default function WindowButtons() {
-    return (
-        <div className="window-buttons">
-            <MinimizeIcon />
-            <MaximizeIcon />
-            <CloseIcon />
-        </div>
-    )
+export default function WindowControls() {
+    if (window?.__TAURI_EVENT_PLUGIN_INTERNALS__) {
+        return (
+            <div className="window-controls">
+                <MinimizeIcon />
+                <MaximizeIcon />
+                <CloseIcon />
+            </div>
+        )
+    } else {
+        return (<></>)
+    }
 }
 
 function MinimizeIcon() {
