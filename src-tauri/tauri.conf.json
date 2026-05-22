@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "silentwrite",
+  "productName": "SilentWrite",
   "version": "0.1.0",
-  "identifier": "dev.foryes.silentwrite",
+  "identifier": "com.foryesify.silentwrite",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,12 +12,11 @@
   "app": {
     "windows": [
       {
-        "title": "silentwrite",
+        "title": "SilentWrite",
         "width": 800,
         "height": 600,
         "decorations": false,
-        "transparent": true,
-        "backgroundColor": "#00000000"
+        "transparent": true
       }
     ],
     "security": {
@@ -28,11 +27,9 @@
     "active": true,
     "targets": "nsis",
     "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
-      "icons/icon.ico"
+      "icons/favicon.png",
+      "icons/icon128x128.ico",
+      "icons/icon64x64.ico"
     ]
   }
 }

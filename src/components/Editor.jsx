@@ -3,3 +3,4 @@ export default function Editor() {
         <div className="editor" contentEditable="plaintext-only"></div>
     )
 }
+

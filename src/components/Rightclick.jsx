@@ -1,5 +1,5 @@
 
-export default function Rightclick() {
+export default function Rightclick({list}) {
     return (
         <div class="rightclick">
         </div>
