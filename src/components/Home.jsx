@@ -1,4 +1,3 @@
-
 export default function Home() {
   return (
     <div className="home">
@@ -8,5 +7,5 @@ export default function Home() {
         <button className="library"></button>
       </div>
     </div>
-  );
+  )
 }

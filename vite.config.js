@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
-import preact from "@preact/preset-vite";
+import { defineConfig } from 'vite'
+import preact from '@preact/preset-vite'
 
-const host = process.env.TAURI_DEV_HOST;
-const hmr_data = { protocol: "ws", host, port: 1421 };
+const host = process.env.TAURI_DEV_HOST
+const hmr_data = { protocol: 'ws', host, port: 1421 }
 
 export default defineConfig({
   plugins: [preact()],
@@ -13,7 +13,7 @@ export default defineConfig({
     host: host || false,
     hmr: host ? hmr_data : undefined,
     watch: {
-      ignored: ["**/src-tauri/**"],
-    },
-  },
-});
+      ignored: ['**/src-tauri/**']
+    }
+  }
+})

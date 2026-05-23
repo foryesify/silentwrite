@@ -1,5 +1,5 @@
-import "./main.css"
-import { render } from "preact";
-import App from "./App";
+import './main.css'
+import { render } from 'preact'
+import App from './App'
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.querySelector('body'))
