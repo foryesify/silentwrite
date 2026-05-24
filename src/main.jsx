@@ -1,4 +1,5 @@
-import './main.css'
+import './assets/main.css'
+import './assets/i18n.json'
 import { render } from 'preact'
 import App from './App'
 

@@ -1,5 +1,4 @@
-import { signal } from '@preact/signals'
-import { getCurrentWindow as getWindow } from '@tauri-apps/api/window'
+import { getCurrentWindow } from '@tauri-apps/api/window'
 
 export default function WindowControls() {
   if (window?.__TAURI_EVENT_PLUGIN_INTERNALS__) {
@@ -10,14 +9,17 @@ export default function WindowControls() {
         <CloseIcon />
       </div>
     )
-  } else {
-    return <></>
   }
+  return <></>
 }
+
+const minimize = async () => (await getCurrentWindow()).minimize()
+const toggleMaximize = async () => await getCurrentWindow().toggleMaximize()
+const close = async () => await getCurrentWindow().close()
 
 function MinimizeIcon() {
   return (
-    <div className="minimize-icon" onClick={async () => (await getWindow()).minimize()}>
+    <div className="minimize-icon" onClick={minimize}>
       <svg
         width="18"
         height="18"
@@ -35,7 +37,7 @@ function MinimizeIcon() {
 
 function MaximizeIcon() {
   return (
-    <div className="maximize-icon" onClick={async () => await getWindow().toggleMaximize()}>
+    <div className="maximize-icon" onClick={toggleMaximize}>
       <svg
         width="18"
         height="18"
@@ -54,7 +56,7 @@ function MaximizeIcon() {
 
 function CloseIcon() {
   return (
-    <div className="close-icon" onClick={async () => await getWindow().close()}>
+    <div className="close-icon" onClick={close}>
       <svg
         width="18"
         height="18"

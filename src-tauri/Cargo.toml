@@ -1,5 +1,5 @@
 [package]
-name = "silentwrite"
+name = "SilentWrite"
 version = "0.1.0"
 description = "SilentWrite is a simple, clear Markdown writing tool."
 authors = ["ForYesify"]
