@@ -1,9 +1,10 @@
 import { getCurrentWindow } from '@tauri-apps/api/window'
+import './WindowControls.css'
 
 export default function WindowControls() {
   if (window?.__TAURI_EVENT_PLUGIN_INTERNALS__) {
     return (
-      <div className="window-controls">
+      <div className="wrapper window-controls">
         <MinimizeIcon />
         <MaximizeIcon />
         <CloseIcon />
@@ -13,7 +14,7 @@ export default function WindowControls() {
   return <></>
 }
 
-const minimize = async () => (await getCurrentWindow()).minimize()
+const minimize = async () => await getCurrentWindow().minimize()
 const toggleMaximize = async () => await getCurrentWindow().toggleMaximize()
 const close = async () => await getCurrentWindow().close()
 

@@ -29,33 +29,12 @@ body {
   background: var(--bg-color);
 }
 
-.inner-wrapper {
+.app {
+  width: 100vw;
+  min-width: 100dvh;
+}
+
+.wrapper {
   width: 100%;
   height: 100%;
-}
-
-.window-controls {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.window-controls > div {
-  width: 46px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.15s ease-in;
-}
-
-.window-controls > div:hover {
-  background-color: var(--bg-darken);
-}
-
-.window-controls > .close-icon:hover {
-  background-color: var(--button-danger);
-  color: var(--white-text);
 }
