@@ -1,5 +1,7 @@
-.window-controls.wrapper {
+.wrapper.window-controls {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
   .minimize-icon,
   .maximize-icon,

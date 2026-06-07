@@ -4,7 +4,7 @@ import './WindowControls.css'
 export default function WindowControls() {
   if (window?.__TAURI_EVENT_PLUGIN_INTERNALS__) {
     return (
-      <div className="wrapper window-controls">
+      <div className="wrapper window-controls" data-tauri-drag-region>
         <MinimizeIcon />
         <MaximizeIcon />
         <CloseIcon />

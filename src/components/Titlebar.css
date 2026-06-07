@@ -1,0 +1,12 @@
+.titlebar {
+  width: 100%;
+  display: flex;
+  color: var(--text-color);
+
+  &>.preferences,&>.window-controls {
+    flex: 1;
+  }
+  &>.title {
+    flex: 2;
+  }
+}

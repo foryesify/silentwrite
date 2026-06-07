@@ -1,0 +1,18 @@
+.wrapper.preferences {
+    display: flex;
+    align-items: center;
+
+    .preference-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.15s ease-in;
+    }
+
+    .preference-icon:hover {
+        background-color: var(--bg-darken);
+    }
+}

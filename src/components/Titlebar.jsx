@@ -1,18 +1,19 @@
-import Preferences from './Preferences'
-import Title from './Title'
-import WindowControls from './WindowControls'
+import './Titlebar.css'
+import Preferences from './Titlebar/Preferences'
+import Title from './Titlebar/Title'
+import WindowControls from './Titlebar/WindowControls'
 
 export default function Titlebar() {
   return (
     <div className="titlebar">
-      <div className="window-controls">
-        <WindowControls />
+      <div className="preferences">
+        <Preferences />
       </div>
-      <div className="flex-1">
+      <div className="title">
         <Title />
       </div>
-      <div className="flex-0">
-        <Preferences />
+      <div className="window-controls">
+        <WindowControls />
       </div>
     </div>
   )
