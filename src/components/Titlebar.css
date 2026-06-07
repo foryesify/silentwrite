@@ -3,6 +3,11 @@
   height: 32px;
   display: flex;
   color: var(--text-color);
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
 
   & > .preferences,
   & > .window-controls {

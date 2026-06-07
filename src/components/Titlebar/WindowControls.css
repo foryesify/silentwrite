@@ -22,6 +22,6 @@
 
   .close-icon:hover {
     background-color: var(--button-danger);
-    color: var(--white-text);
+    color: #fff;
   }
 }

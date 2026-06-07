@@ -20,7 +20,8 @@
     "@preact/signals": "^2.9.0",
     "@tauri-apps/api": "^2.11.0",
     "codemirror": "^6.0.2",
-    "preact": "^10.29.1"
+    "preact": "^10.29.1",
+    "wouter-preact": "^3.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -9,16 +9,18 @@
   --text-color: #333;
   --bg-darken: #ddd;
   --button-danger: #c04031;
-  --white-text: #fafafa;
+  --text-reverse: #fafafa;
+  --fg: #333;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #333333;
+    --bg-color: #333;
     --text-color: #f3f3f3;
     --bg-darken: #515151;
     --button-danger: #c04031;
-    --white-text: #fafafa;
+    --text-reverse: #333;
+    --fg: #f3f3f3;
   }
 }
 
@@ -31,10 +33,30 @@ body {
 
 .app {
   width: 100vw;
-  min-width: 100dvh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  .view {
+    flex: 1;
+  }
 }
 
 .wrapper {
   width: 100%;
   height: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

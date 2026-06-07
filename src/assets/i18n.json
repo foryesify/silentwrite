@@ -1,7 +1,21 @@
 {
   "version": "1.0.0",
   "zh-CN": {
-    "appName": "SilentWrite",
-    "author": "夜水"
+    "title-homeview": "SilentWrite - 起始页",
+    "home": {
+      "title-welcome": "从这里开始",
+      "brief-intro": "SilentWrite是一款专注于写作的Markdown编辑器，提供简洁的界面和强大的功能，让您能够专注于创作",
+      "new-essay": "新建随笔",
+      "open-library": "文章列表"
+    }
+  },
+  "en-US": {
+    "title-homeview": "SilentWrite - Home",
+    "home": {
+      "title-welcome": "Your Markdown, Your Flow",
+      "brief-intro": "With everything clear, SilentWrite is where writing happens, providing a distraction-free environment for your thoughts",
+      "new-essay": "New Essay",
+      "open-library": "Open Library"
+    }
   }
 }
