@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { path, __dirname } from 'path'
+import path from 'path'
 import preact from '@preact/preset-vite'
 
 const host = process.env.TAURI_DEV_HOST
