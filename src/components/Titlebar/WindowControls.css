@@ -7,7 +7,7 @@
   .maximize-icon,
   .close-icon {
     width: 46px;
-    height: 32px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

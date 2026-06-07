@@ -1,3 +1,3 @@
-export default function Msgbox({title, text}) {
-    return <></>
+export default function Msgbox({ title, text }) {
+  return <></>
 }

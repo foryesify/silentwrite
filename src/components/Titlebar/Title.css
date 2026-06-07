@@ -1,9 +1,9 @@
 .wrapper.title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .text {
-        user-select: none;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .text {
+    user-select: none;
+  }
 }
